@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Behavior System</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome -->
+    <style>
+        
+
+        /* Footer Styles */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px; /* Add space between content and footer */
+        }
+
+        footer p {
+            font-size: 14px; /* Reduce font size in the footer */
+            margin: 0;
+        }
+
+        /* Additional Styles */
+
+        /* Menu Toggle Button */
+        .menu-toggle {
+            display: none; /* Hide initially */
+            cursor: pointer;
+            color: #fff;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        /* Mobile Navigation Styles */
+        @media only screen and (max-width: 768px) {
+            nav .tabs {
+                display: none; /* Hide the tabs */
+            }
+
+            .menu-toggle {
+                display: block; /* Show the menu toggle */
+            }
+
+            .container {
+                padding-top: 80px; /* Add space for fixed navigation */
+            }
+
+            nav.active .tabs {
+                display: flex; /* Show tabs when navigation is active */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">Student Behavior System</span>
+          </a>
+          <nav href="/index.html" class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+            <a href="index.html" class="mr-5 hover:text-gray-900">Home</a>
+            <a href="model.html" class="mr-5 hover:text-gray-900">Prediction</a>
+            <a href="about.html" class="mr-5 hover:text-gray-900">About</a>
+            <a href="services.html" class="mr-5 hover:text-gray-900">Services</a>
+            <a href="contact.html" class="mr-5 hover:text-gray-900">Contact</a>
+          </nav>
+          <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Search Now
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>  
+
+
+    <div class="container">
+        <!-- Streamlit App Embed Code -->
+        <iframe src="http://localhost:8501/" style="width: 100%; height: 800px; border: none;"></iframe>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Gramin Technical & Management Capus. All rights reserved.</p>
+    </footer>
+</body>
+</html>

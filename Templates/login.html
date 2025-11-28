@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.transparenttextures.com/patterns/cardboard-flat.png');
+            background-size: cover;
+            background-blend-mode: overlay;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/cardboard-flat.png'); }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            width: 400px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.5s ease;
+            overflow: hidden;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+            box-shadow: 0 5px 15px #9F7AEA;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color:#9F7AEA;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message,
+        .success-message {
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .error-message {
+            color: #d9534f;
+            background-color: #f2dede;
+        }
+
+        .success-message {
+            color: #5cb85c;
+            background-color: #dff0d8;
+        }
+
+        .decorative-element {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-color: #9F7AEA;
+            border-radius: 50%;
+            top: -40px;
+            left: calc(50% - 40px);
+            animation: float 5s infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #007bff;
+            cursor: pointer;
+        }
+
+        .signup-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <h2>Login</h2>
+        <div class="decorative-element"></div>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" id="loginButton">Login</button>
+        </form>
+        <div id="errorMessage" class="error-message"></div>
+        <div class="signup-link" id="signupLink">Don't have an account? Sign Up</div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const loginForm = document.getElementById('loginForm');
+
+            // Login form submission
+            loginForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const username = this.username.value;
+                const password = this.password.value;
+
+                // Here you can implement login logic, such as sending data to a server,
+                // verifying credentials, etc.
+
+                // For demonstration purposes, we'll just redirect to the index.html page
+                window.location.href = 'index.html';
+            });
+
+            // Redirect to register page on sign up link click
+            const signupLink = document.getElementById('signupLink');
+            signupLink.addEventListener('click', function () {
+                // Redirect to register.html
+                window.location.href = 'register.html';
+            });
+        });
+    </script>
+</body>
+</html>

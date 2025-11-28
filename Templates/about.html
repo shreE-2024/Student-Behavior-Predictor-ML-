@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Student Behavior System</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: cornsilk;
+        }
+
+        header{
+            border: none;
+            background-color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 2px solid #343a40;
+            padding-bottom: 20px;
+        }
+
+        .about h2 {
+            color: #343a40;
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #343a40;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .about p, .about ul {
+            color: #6c757d;
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .about ul {
+            list-style-type: disc;
+            list-style-position: inside;
+            margin-left: 20px;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+            border-top: 2px solid #fff;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            color: #fff;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            nav .tabs {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .container {
+                padding-top: 80px;
+            }
+
+            nav.active .tabs {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl">Student Behavior System</span>
+            </a>
+            <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center">
+                <a href="index.html" class="mr-5 hover:text-gray-900">Home</a>
+                <a href="model.html" class="mr-5 hover:text-gray-900">Prediction</a>
+                <a href="about.html" class="mr-5 hover:text-gray-900">About</a>
+                <a href="services.html" class="mr-5 hover:text-gray-900">Services</a>
+                <a href="contact.html" class="mr-5 hover:text-gray-900">Contact</a>
+            </nav>
+            <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+                Search Now
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+    </header>  
+
+    <div class="container">
+        <div class="about">
+            <h2>About Student Behavior System</h2>
+            <p>The Student Behavior System is a comprehensive tool designed to track and manage student behavior efficiently. With its user-friendly interface and powerful features, it facilitates effective communication between teachers, students, and parents.</p>
+            <p>Key features of the Student Behavior System include:</p>
+            <ul>
+                <li>Behavior Tracking: Record and monitor student behavior patterns.</li>
+                <li>Analytics: Gain insights through data analytics and reports.</li>
+                <li>Communication: Facilitate communication between teachers, students, and parents.</li>
+            </ul>
+            <p>Our mission is to provide schools and educational institutions with a reliable solution to promote positive behavior, enhance student engagement, and foster a supportive learning environment.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Student Behavior System</p>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

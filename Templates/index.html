@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Student Behavior System </title>
+</head>
+<style>
+    /* Features Section Styles */
+    .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 30px 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: calc(33.33% - 40px);
+            margin-bottom: 40px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add box-shadow transition */
+            background-image: linear-gradient(to bottom, #ffffff, #f5f5f5); /* Gradient for features */
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+        }
+
+        .feature h3 {
+            color: #343a40;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .feature p {
+            color: #6c757d;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+
+        .about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.section {
+    flex-basis: 45%; /* Adjust the width of each section */
+    text-align: left; /* Align text to the left */
+}
+
+.section h2 {
+    color: #343a40;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.section p {
+    color: #6c757d;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+
+.footer-1 {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-1 p {
+    font-size: 14px;
+    margin: 0;
+}
+
+
+
+
+  /* Your CSS styles here */
+  .active-tab {
+    border-bottom: 2px solid #4F46E5; /* Change this color to your desired highlight color */
+  }
+</style>
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">Student Behavior System</span>
+          </a>
+          <nav href="/index.html" class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+            <a href="index.html" class="mr-5 hover:text-gray-900">Home</a>
+            <a href="model.html" class="mr-5 hover:text-gray-900">Prediction</a>
+            <a href="about.html" class="mr-5 hover:text-gray-900">About</a>
+            <a href="services.html" class="mr-5 hover:text-gray-900">Services</a>
+            <a href="contact.html" class="mr-5 hover:text-gray-900">Contact</a>
+          </nav>
+          <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Search Now
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>  
+
+
+
+
+      <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Identify trends 
+              <br class="hidden lg:inline-block">in student behavior.
+            </h1>
+            <p class="mb-8 leading-relaxed">
+                Discover Track student behaviors seamlessly. From leadership to academic excellence, our platform fosters accountability and positive environments. Join us in promoting a culture of excellence in schools.</p>
+          </div>
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <img src="" alt="" />
+
+            <img class="object-cover object-center rounded" alt="Random Image" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHN0dWRlbnQlMjBiZWdhdmlvciUyMHByZWRpY3Rpb24lMjA3MjB4NjAwfGVufDB8fDB8fHww">
+          </div>
+        </div>
+      </section> 
+
+      <div class="container">
+        <div class="features">
+            <div class="feature">
+                <h3>Behavior Tracking</h3>
+                <p>Record and monitor student behavior patterns.</p>
+            </div>
+            <div class="feature">
+                <h3>Analytics</h3>
+                <p>Gain insights through data analytics and reports.</p>
+            </div>
+            <div class="feature">
+                <h3>Communication</h3>
+                <p>Facilitate communication between teachers, students, and parents.</p>
+            </div>
+        </div>
+
+
+        <div class="about">
+          <div class="section">
+              <h2>Purpose</h2>
+              <p>The purpose of this project is to predict student performance based on various attributes. By analyzing factors such as age, gender, parental education level, attendance rate, hours of study, extracurricular activities, and more, we aim to provide insights into the factors that influence a student's academic success.</p>
+          </div>
+          <div class="section">
+              <h2>Data Source</h2>
+              <p>The dataset used in this application contains synthetic data generated for Indian student records. While the data is fictional, it is based on realistic distributions and characteristics commonly found in student populations.</p>
+          </div>
+          <!--<div class="section">
+              <h2>Model</h2>
+              <p>We have employed a Random Forest Regressor model for predicting CGPA (Cumulative Grade Point Average) based on the provided student attributes. This machine learning algorithm is well-suited for regression tasks and is capable of capturing complex relationships within the data.</p>
+          </div>-->
+          <div class="section">
+              <h2>Features</h2>
+              <p>The features used in this model include age, gender, parental education level, location, attendance rate, hours of study, extracurricular activities, previous academic performance, semester gap, area of interest, future goals, and more. These attributes have been carefully selected based on their potential impact on student performance.</p>
+          </div>
+          <div class="section">
+              <h2>How to Use</h2>
+              <p>To predict student Behavior, simply navigate to the "Student Performance Prediction" section and input the relevant student attributes. Upon clicking the "Predict" button, the application will display the predicted CGPA for the student based on the provided information.</p>
+          </div>
+      </div>
+
+        <section class="text-gray-600 body-font">
+          <div class="container px-5 py-24 mx-auto flex flex-wrap flex-col">
+            <div class="flex mx-auto flex-wrap mb-20">
+              <a id="tab1" class="sm:px-6 py-3 w-1/2 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider" onclick="openTab('content1')">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>Data Source
+            </a>
+              <a id="tab2" class="sm:px-6 py-3 w-1/2 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider" onclick="openTab('content2')">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>Student Details
+              </a>
+              <a id="tab3" class="sm:px-6 py-3 w-1/2 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider" onclick="openTab('content3')">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+                  <circle cx="12" cy="5" r="3"></circle>
+                  <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+                </svg>Behavior Records
+              </a>
+              <a id="tab4" class="sm:px-6 py-3 w-1/2 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider" onclick="openTab('content4')">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>Attendance
+              </a>
+            </div>
+            <div id="content1" class="tab-content">
+              <!-- Content for Data Source -->
+              <p>This tab provides access to the data sources used to collect information about students, such as enrollment data, demographic information, and contact details.</p>
+            </div>
+            <div id="content2" class="tab-content" style="display: none;">
+              <!-- Content for Student Details -->
+              <p>Here you can view and manage detailed information about each student, including their personal details, academic records, and any special accommodations they may require.</p>
+            </div>
+            <div id="content3" class="tab-content" style="display: none;">
+              <!-- Content for Behavior Records -->
+              <p>This section allows you to track and record student behavior, including disciplinary actions, achievements, and any interventions that have been implemented.</p>
+            </div>
+            <div id="content4" class="tab-content" style="display: none;">
+              <!-- Content for Attendance -->
+              <p>View and manage student attendance records, including absences, tardiness, and any patterns or trends that may require attention.</p>
+            </div>
+          </div>
+        </section>
+      
+        <script>
+          function openTab(tabName) {
+            // Hide all tab contents
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+              tabContents[i].style.display = "none";
+            }
+      
+            // Deactivate all tabs
+            var tabs = document.getElementsByTagName("a");
+            for (var i = 0; i < tabs.length; i++) {
+              tabs[i].classList.remove("active-tab");
+            }
+      
+            // Show the selected tab content
+            document.getElementById(tabName).style.display = "block";
+      
+            // Activate the clicked tab
+            document.getElementById("tab" + tabName.substr(-1)).classList.add("active-tab");
+      
+            // Remove underline from Data Source tab if another tab is clicked
+            if (tabName !== 'content1') {
+              document.getElementById("tab1").classList.remove("active-tab");
+            }
+          }
+        </script>
+        <footer class="text-gray-600 body-font">
+          <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              </svg>
+              <span class="ml-3 text-xl">Student Behavior System</span>
+            </a>
+            <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 SBS —
+              <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@__</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+              <a class="text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                  <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </footer>
+        <footer class="footer-1">
+          <p>&copy; 2024 Student Behavior System</p>
+      </footer>
+      
+
+</body>
+</html>

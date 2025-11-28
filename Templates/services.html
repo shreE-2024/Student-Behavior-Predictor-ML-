@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Student Behavior System</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome -->
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            
+        }
+
+        header{
+            background-color: white;
+        }
+
+        
+
+        
+        /* Container Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Services Section Styles */
+        .services {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .services h2 {
+            color: #343a40;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .services p {
+            color: #6c757d;
+            font-size: 16px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .service {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .service h3 {
+            color: #343a40;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            color: #6c757d;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px; /* Add space between content and footer */
+        }
+
+        footer p {
+            font-size: 12px; /* Reduce font size in the footer */
+            margin: 0;
+        }
+
+        /* Additional Styles */
+
+        /* Menu Toggle Button */
+        .menu-toggle {
+            display: none; /* Hide initially */
+            cursor: pointer;
+            color: #fff;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        /* Mobile Navigation Styles */
+        @media only screen and (max-width: 768px) {
+            nav .tabs {
+                display: none; /* Hide the tabs */
+            }
+
+            .menu-toggle {
+                display: block; /* Show the menu toggle */
+            }
+
+            .container {
+                padding-top: 80px; /* Add space for fixed navigation */
+            }
+
+            nav.active .tabs {
+                display: flex; /* Show tabs when navigation is active */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">Student Behavior System</span>
+          </a>
+          <nav href="/index.html" class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+            <a href="index.html" class="mr-5 hover:text-gray-900">Home</a>
+            <a href="model.html" class="mr-5 hover:text-gray-900">Prediction</a>
+            <a href="about.html" class="mr-5 hover:text-gray-900">About</a>
+            <a href="services.html" class="mr-5 hover:text-gray-900">Services</a>
+            <a href="contact.html" class="mr-5 hover:text-gray-900">Contact</a>
+          </nav>
+          <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Search Now
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>  
+
+    <div class="container">
+        <div class="services">
+            <h2>Our Services</h2>
+            <p>We offer a range of services to support educators, students, and parents in promoting positive behavior and creating a conducive learning environment.</p>
+            <div class="service">
+                <h3>Behavior Tracking</h3>
+                <p>Record and monitor student behavior patterns in real-time. Easily track incidents, interventions, and outcomes.</p>
+            </div>
+            <div class="service">
+                <h3>Data Analytics</h3>
+                <p>Gain valuable insights through advanced data analytics. Identify trends, patterns, and areas for improvement to enhance student outcomes.</p>
+            </div>
+            <div class="service">
+                <h3>Communication Platform</h3>
+                <p>Facilitate seamless communication between teachers, students, and parents. Share updates, announcements, and progress reports effortlessly.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Student Behavior System</p>
+    </footer>
+    <script>
+        // Toggle mobile navigation
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
